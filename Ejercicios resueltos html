@@ -1,0 +1,307 @@
+------------#1----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Ejercicio resuelto HTML: Crea una página con las siguientes etiquetas
+Para este ejercicio necesitas estudiar las tres primeras secciones del tutorial HTML.
+
+Crea una página web HTML que cumpla con las siguientes especificaciones:
+
+Estructura Básica: Crea la estructura básica de un documento HTML con las siguientes etiquetas:
+
+<!DOCTYPE html>
+<html lang="es">
+<head> con:
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Página Web</title>
+<body> que contenga:
+<header> con:
+<h1>Bienvenidos a Mi Página Web</h1>
+<p>Esta es una página de ejemplo para el ejercicio.</p>
+Secciones: Agrega dos secciones a tu página:
+
+Una sección principal <main> con:
+<h2>Acerca de Nosotros</h2>
+<p>Somos una empresa dedicada a ofrecer soluciones web.</p>
+Una sección <section> con:
+<h2>Nuestros Servicios</h2>
+Una lista ordenada <ol> con tres elementos <li> que describan los servicios que ofrece tu empresa. Las viñetas deben ser de tipo abecedario.
+Un enlace <a> con el texto «Ver más servicios» que lleve a https://www.ejemplo.com. Abre el enlace en una nueva ventana o pestaña del navegador.
+Pie de Página: Crea un pie de página <footer> con dos enlaces:
+
+Un enlace <a> con el texto «Enviar correo electrónico» que tenga href="mailto:info@miempresa.com".
+Un enlace <a> con el texto «Llamar por teléfono» que tenga href="tel:+1234567890".
+Incluye el carácter especial «©» seguido del nombre de tu empresa para indicar «Todos los derechos reservados». Utiliza entidades, código hexadecimal o decimal para incluir el carácter especial
+---------------------AQUI LO RESUELVO----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Este es el ejercicio resuelto #1:
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenkai Tech</title>
+</head>
+<body> 
+    <header>
+        <h1>Bienvenidos a Tenkai Tech</h1>
+        <p>Esta es una página web para armar computadoras</p>
+    </header>
+
+    <main>
+        <h2>Acerca de Nosotros</h2>
+        <p>Somos una empresa dedicada a componentes de PC</p>
+    </main>
+
+    <section>
+        <h2>Nuestros Servicios</h2>
+            <ol type="a">    
+                <li>Ensamblajes</li>
+                <li>Mantenimientos</li>
+                <li>Componentes</li>
+            </ol>
+
+            <a _blank href="https://www.ejemplo.com">Ver más servicios</a>
+    </section>
+
+    <footer>
+        <a href="mailto:tenkaitech1@gmail.com">Envíanos un correo</a><br>
+        <a href="tel:+507 6635-7861">Contáctenos por teléfono</a> <br>
+        &#169; Tenkai Tech, Todos los derechos reservados
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------#2----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aqui va otro ejercicio.  #2
+2. Ejercicio resuelto HTML: Crea un formulario de registro
+Para este ejercicio necesitas estudiar la cuarta sección del tutorial HTML.
+
+Crea una página de registro en HTML que recoja información detallada de los usuarios. La página debe contener los siguientes campos:
+
+Información Personal:
+
+Nombre (Campo de texto, requerido)
+Apellido (Campo de texto, requerido)
+Fecha de Nacimiento (Campo de fecha, requerido)
+Género (Selector de tipo radio: Masculino, Femenino, Otro, requerido)
+Información de Contacto:
+
+Dirección de Correo Electrónico (Campo de correo electrónico, requerido)
+Número de Teléfono (Campo de teléfono, requerido)
+Dirección (Campo de texto de varias líneas)
+Información de Cuenta:
+
+Nombre de Usuario (Campo de texto, requerido)
+Contraseña (Campo de contraseña, requerido)
+Confirmación de Contraseña (Campo de contraseña para confirmar, requerido)
+Preferencias:
+
+Seleccionar un Color Favorito (Selector de tipo select: Rojo, Azul, Verde, Amarillo)
+Aceptar Términos y Condiciones (Selector de tipo checkbox, requerido)
+Utiliza etiquetas fieldset y legend para agrupar y describir secciones de formulario. Asegúrate de que los campos marcados como «requeridos» deben ser completados antes de enviar el formulario. Enlaza cada etiqueta <label> con su campo de entrada correspondiente utilizando los atributos for e id para mejorar la accesibilidad.
+--------------AQUI ABAJO LO RESUELVO---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+<body> 
+    <h1>Formulario de registro</h1>
+     <form action="#" method="post">
+        <fieldset> <legend>Informacion personal</legend>
+                <label for="nombre" id="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Anel" required> <br>
+
+                <label for="apellido" id="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Martéz" required> <br>
+
+                <label for="fecha" id="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required> <br>
+
+                <legend>Género</legend>
+                <input type="radio" id="masculino" name="genero" required>
+                <label for="masculino">Masculino</label> <br>
+                <input type="radio" id="femenino" name="genero" required>
+                <label for="femenino">Femenino</label> <br>
+                <input type="radio" id="otro" name="otro" required>
+                <label for="otro">Otro</label> <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion de contacto</legend>
+                <label for="mail">Correo electrónico:</label>
+                <input type="email" id="mail" name="mail" placeholder="Email" required> <br>
+
+                <label for="telefono">Número de teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8}" placeholder="Numero de telefono" size="9" required> <br>
+
+                <label for="direccion">Dirección:</label>
+                <textarea name="direccion" id="direccion" rows="2" cols="25" placeholder="Escribe tu direccion"></textarea> <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion de Cuenta:</legend>
+                <label for="n_usuario">Nombre de usuario:</label>
+                <input type="text" id="n_usuario" name="usuario" required> <br>
+
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" required> <br>
+
+                <label for="c_contrasena">Confirmar contraseña</label>
+                <input type="password" id="c_contrasena" name="c_contrasena" required> <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+                <label for="color">Selecciona tu color favorito</label>
+                <select id="color" name="scolor">
+                    <option value="rojo">Rojo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="amarillo">Amarillo</option>
+                </select> <br>
+
+                <label for="aceptar">Aceptar términos y condiciones</label>
+                <input type="checkbox" id="aceptar" name="aceptar">
+        </fieldset>
+        <input type="submit" value="registrarse">
+
+     </form>
+</body>
+</html>
+-----------------------Se viene el ejercicio #3------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Ejercicio resuelto HTML: Crea una tabla de contenido en HTML5
+Para este ejercicio necesitas estudiar las secciones 6 y 7 del tutorial HTML.
+
+Imagina que estás creando una página web para un libro en línea y necesitas crear una tabla de contenido para mostrar los capítulos del libro. Debes usar las siguientes etiquetas HTML: <table>, <caption>, <tr>, <td>, <th>, <colgroup>, <col>, <tbody>, <thead>, <tfoot> y los atributos rowspan y colspan según sea necesario.
+
+Crea una tabla <table> que contendrá la tabla de contenido del libro.
+Agrega una fila de encabezado <thead> a la tabla con una fila <tr>.
+En la fila de encabezado, agrega celdas de encabezado <th> para las siguientes columnas: Capítulo, Título del Capítulo y Páginas.
+Utiliza el atributo colspan para combinar las tres celdas de encabezado en una sola celda de encabezado que tenga el texto «Contenido del Libro».
+Ahora, agrega tres filas <tr> en la sección del cuerpo <tbody> de la tabla para representar los primeros tres capítulos del libro.
+Dentro de cada fila, agrega una celda de datos <td> para cada columna (Capítulo, Título del Capítulo y Páginas). Llena estas celdas con información de ejemplo para los primeros tres capítulos del libro.
+Utiliza el atributo rowspan para combinar las celdas de datos de los capítulos en una sola celda para cada capítulo. Esto indicará cuántas filas ocupa cada capítulo.
+Luego, agrega una fila <tr> adicional para representar el cuarto capítulo del libro. En este caso, el cuarto capítulo debería ocupar solo una fila.
+Completa la tabla agregando más filas y celdas de datos para representar más capítulos del libro, manteniendo la estructura de la tabla de contenido.
+--------------------------------AQUI ABAJO LO RESUELVO--------------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+<body> 
+        <table>
+            <caption>Libro1</caption>
+
+            <thead>
+                <tr>
+                    <th>Capítulos</th>
+                    <th>Título del capítulo</th>
+                    <th>Páginas</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <td colspan="2">Contenido del libro</td>
+               <tr>
+                    <td rowspan="2">Cap 1</td>
+                    <td>golpes</td>
+                    <td>10</td>
+               </tr>
+               <tr>
+                    
+                    <td>karate</td>
+                    <td>10</td>
+               </tr>
+               <tr>
+                    <td>cap 3</td>
+                    <td>taeok</td>
+                    <td>11</td>
+               </tr>
+               <tr>
+                    <td>Cap4</td>
+                    <td>memory</td>
+                    <td>12</td>
+               </tr>
+
+            </tbody>
+                
+        </table>
+</body>
+</html>
+
+----------Ejercicio #4--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Ejercicio resuelto HTML. Crea una página web utilizando contenido incrustado y marcadores.
+
+Para este ejercicio necesitas estudiar las quinta sección del tutorial HTML.
+
+Crea una página web que incluya las siguientes características:
+
+Utiliza la etiqueta <img> para mostrar una imagen en tu página. Debes incluir los siguientes atributos:
+
+src: Especifica la URL o la ruta de la imagen que deseas mostrar.
+alt: Proporciona un texto alternativo para la imagen en caso de que no se cargue correctamente.
+width: Establece el ancho de la imagen en píxeles.
+height: Establece la altura de la imagen en píxeles.
+Inserta un video de YouTube en tu página. Para ello, debes utilizar la etiqueta <iframe>. Asegúrate de seguir estos pasos:
+
+Ve al video de YouTube que deseas insertar.
+Haz clic en el botón «Compartir» debajo del video.
+Selecciona la opción «Insertar».
+Copia el código HTML proporcionado por YouTube y pégalo en tu página.
+Agrega un título o encabezado a tu página utilizando la etiqueta <h1>. Elige un título relevante para tu página.
+
+Utiliza marcadores para crear enlaces internos que permitan a los usuarios navegar rápidamente entre la imagen y el video. Para ello, utiliza la etiqueta <a> con el atributo href que apunte a los marcadores.
+
+Incluye las etiquetas para la metainformación, como <meta name="description" content="Descripción de la página"> y <meta name="author" content="Tu Nombre">.
+
+Puedes agregar cualquier otro contenido o texto que desees en tu página para darle contexto.
+------------------------------aqui lo resuelvo-----------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta pagina es solo sobre el ui de goku">
+    <meta name="author" content="Anel Martéz">
+    <title>Incrustado y marcadores UI</title>
+</head>
+<body>
+    <h1>Goku Ui</h1> <a href="#seccion1">Ir a la seccion de gokui foto</a> <a href="#seccion2">Ir a la seccion de Youtube</a> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <h3>este es gokui en foto</h3> 
+    <h6 id="seccion1"></h6>
+    <img width="400" height="225" src="https://www.db-z.com/wp-content/uploads/2023/10/Sparking-Zero.webp" alt="goku ui"> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <p>este es goku en video</p>
+    <h6 id="seccion2"></h6>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jk4lwUg8XCs?si=i_XzmOHzucoP9w9D&amp;start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
